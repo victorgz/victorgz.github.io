@@ -254,6 +254,19 @@ header .bg-video video{
     height: 100%;
   }
 }
+
+@media(max-width: 768px) {
+    header .bg-video video{
+        display: none;
+    }
+    header .bg-video{
+        background-image: url(../img/header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+}
+
 /*End of VIDEO MEDIA RESPONSIVE*/
 
 @media(min-width:768px) {
