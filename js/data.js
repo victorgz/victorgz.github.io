@@ -9,7 +9,7 @@ var data = {
 				{"img": "touractive/01.jpg", "label":"High level prototype"},
 				{"img": "touractive/02.jpg", "label":"Low level prototype"},
 				{"img": "touractive/03.png", "label":"Icon design"},
-				{"img": "touractive/04.PNG", "label":"Interactive prototype"},
+				{"img": "touractive/04.png", "label":"Interactive prototype"},
 			]
 		},
 	"nextwoodenfurniture":
