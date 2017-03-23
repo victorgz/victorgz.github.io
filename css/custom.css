@@ -154,6 +154,12 @@ section .boxes .box .content{
 
 #education .description{
 	height: 100px;
+	display: table;
+}
+
+#education .description > div{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #education .description h4{
@@ -270,9 +276,19 @@ section .boxes .box .content{
 	margin-top: 4em;
 }
 
+#contact a{
+	text-align: center;
+	text-decoration: none;
+}
+
 #contact img{
 	margin: 0 auto;
 	max-height: 70px;
+}
+
+#contact h4{
+	display: block;
+	color: #23262d;
 }
 
 
