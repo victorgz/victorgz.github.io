@@ -180,6 +180,11 @@ section .boxes .box .content{
 	margin: 0;
 }
 
+#skills .progress{
+	background-color: #eee;
+	border-radius: 0;
+}
+
 #skills .progress-bar{
 	background-color: #23262d;
 }
