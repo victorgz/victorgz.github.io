@@ -71,6 +71,14 @@ h3{
 	color: #eee;
 }
 
+.navbar-default .navbar-toggle{
+	border-color: #eee;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #eee;
+}
+
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
 	background-color: rgb(35, 38, 45);
 }
