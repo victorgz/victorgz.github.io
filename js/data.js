@@ -89,6 +89,11 @@ $(document).ready(function(){
 			$('#carousel .carousel-inner').append(img);
 		}
 
+		if(pictures.length == 1){
+			$("#carousel .carousel-control").hide();
+		}else{
+			$("#carousel .carousel-control").show();
+		}
 		$("#productModal").modal("show");
 	});
 

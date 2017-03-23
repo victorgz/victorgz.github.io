@@ -71,6 +71,9 @@ h3{
 	color: #eee;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: rgb(35, 38, 45);
+}
 #experience, #courses, #portfolio{
 	background-color: #eee;
 }
@@ -151,6 +154,12 @@ section .boxes .box .content{
 
 #education .description{
 	height: 100px;
+	display: table;
+}
+
+#education .description > div{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #education .description h4{
@@ -178,6 +187,11 @@ section .boxes .box .content{
 
 #skills h5{
 	margin: 0;
+}
+
+#skills .progress{
+	background-color: #eee;
+	border-radius: 0;
 }
 
 #skills .progress-bar{
@@ -262,9 +276,19 @@ section .boxes .box .content{
 	margin-top: 4em;
 }
 
+#contact a{
+	text-align: center;
+	text-decoration: none;
+}
+
 #contact img{
 	margin: 0 auto;
 	max-height: 70px;
+}
+
+#contact h4{
+	display: block;
+	color: #23262d;
 }
 
 
