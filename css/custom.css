@@ -71,6 +71,9 @@ h3{
 	color: #eee;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: rgb(35, 38, 45);
+}
 #experience, #courses, #portfolio{
 	background-color: #eee;
 }
