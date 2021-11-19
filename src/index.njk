@@ -30,7 +30,7 @@
 
 <body data-spy="scroll" data-target="" data-offset="150">
 
-<header id="intro" class="container-fluid"">
+<header id="intro" class="container-fluid">
 	<video poster="./images/cover.jpg" id="bgvid" playsinline autoplay muted loop>
 		<source src="./videos/bg-video.mp4" type="video/mp4">
 	</video>
@@ -90,43 +90,30 @@
 <!-- end ABOUT -->
 
 <!-- EXPERIENCE -->
+
+{%- for post in collections.post -%}
+		  <li>
+			  <h3>{{ post.data.title }}</h3>
+			  <div>{{ post.templateContent | safe }}</div>
+		  </li>
+		{%- endfor -%}
 <section id="experience" class="container-fluid">
 	<div class="container">
 		<h1>Experience</h1>
 		<div class="row boxes">
+			{%- for experience in collections.experiences -%}
 			<div class="col-md-4">
 				<div class="box">
 					<div class="title">
-						<h4>Project developer</h4>
-						<h5>Demola Tampere | Finland</h5>
+						<h4>{{ experience.data.title }}</h4>
+						<h5>{{ experience.data.company }} | {{ experience.data.location }}</h5>
 					</div>
 					<div class="content">
-						<p>Project “Next Wooden Furniture Products” with the company Puulon Oy. Development of the online portfolio, blog of the project and collaboration in the design process of the wooden products.</p>
+						<p>{{ experience.templateContent | safe }}</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="box">
-					<div class="title">
-						<h4>Frontend &amp; Backend Lead developer</h4>
-						<h5>Hightrack | Spain</h5>
-					</div>
-					<div class="content">
-						<p>Management and development of Hightrack’s servers, web application and main website. Support in the design process and digital marketing. Official webiste: http://www.hightrack.me</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="box">
-					<div class="title">
-						<h4>Talentum Startups</h4>
-						<h5>Telefónica | Spain</h5>
-					</div>
-					<div class="content">
-						<p>LAB of Telefónica with Fundación Adecco and Ericsson to develop accessible technologies: web and smartphone application to help and improve the experience of the job searching process.</p>
-					</div>
-				</div>
-			</div>
+			{%- endfor -%}
 		</div>
 	</div>
 </section>
@@ -136,28 +123,21 @@
 <section id="education" class="container-fluid">
 	<div class="container">
 		<h1>Education</h1>
+			
+		{%- for edu in collections.education -%}
 		<div class="row">
 			<div class="col-md-3 img-container">
-				<img src="images/tut.png">
+				<img src="{{ edu.data.logo }}">
 			</div>
 			<div class="col-md-9 description">
 				<div>
-					<h4>Degree in Pervasive computing and Information management &amp; logistics</h4>
-					<h5>Tampere University of Technology, Finland | 2016 - 2017</h5>
+					<h4>{{ edu.data.title }}</h4>
+					<h5>{{ edu.data.company }}, {{ edu.data.location }} | {{ edu.data.period }}</h5>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3 img-container">
-				<img src="images/uc3m.png">
-			</div>
-			<div class="col-md-9 description">
-				<div>
-					<h4>Dual bachelor in Computer science engineering and Business administration</h4>
-					<h5>University Carlos III of Madrid, Spain | 2012 - 2016</h5>
-				</div>
-			</div>
-		</div>
+		{%- endfor -%}
+		
 	</div>
 </section>
 <!-- end EDUCATION -->
@@ -167,48 +147,20 @@
 	<div class="container">
 		<h1>Courses</h1>
 		<div class="row boxes">
+
+			{%- for course in collections.courses -%}
 			<div class="col-md-3">
 				<div class="box">
 					<div class="title">
-						<h5>Talentum Startups Engineering Bootcamp: git, gitHub &amp; SourceTree</h5>
+						<h5>{{ course.data.title }}</h5>
 					</div>
 					<div class="content">
-						<p>KeepCoding | Madrid, Spain</p>
+						<p>{{ course.data.company }} | {{ course.data.location }}</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="box">
-					<div class="title">
-						<h5>Lean Startup principles for social enterprises</h5>
-					</div>
-					<div class="content">
-						<p>NovoED | Madrid, Spain</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="box">
-					<div class="title">
-						<h5>Engaging Realities</h5>
-					</div>
-					<div class="content">
-						<p>Universitas Telefónica | Barcelona, Spain</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="box">
-					<div class="title">
-						<h5>Bootcamp of Development & Programming for Android devices</h5>
-					</div>
-					<div class="content">
-						<p>KeepCoding | Madrid, Spain</p>
-					</div>
-				</div>
-			</div>
-			</div>
-			
+			{%- endfor -%}
+
 		</div>
 	</div>
 </section>
