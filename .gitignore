@@ -1,3 +1,6 @@
 portfolio/*
 *.psd
 node_modules
+
+# Eleventy
+_site
