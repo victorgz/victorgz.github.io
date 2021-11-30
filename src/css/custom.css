@@ -1,3 +1,8 @@
+:root{
+	--navbar-height: 50px;
+	--color-lightgrey: #eee;
+}
+
 html, body{
 	height: 100%;
 }
@@ -16,7 +21,7 @@ html, body{
 	margin-top: -80px;
 	width: 100%;
 	text-align: center;
-	color: #eee;
+	color: var(--color-lightgrey);
 	z-index: 10;
 	font-size: 50px;
 }
@@ -68,22 +73,22 @@ h3{
 }
 
 .navbar-default .navbar-nav>li>a{
-	color: #eee;
+	color: var(--color-lightgrey);
 }
 
 .navbar-default .navbar-toggle{
-	border-color: #eee;
+	border-color: var(--color-lightgrey);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #eee;
+    background-color: var(--color-lightgrey);
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
 	background-color: rgb(35, 38, 45);
 }
 #experience, #courses, #portfolio{
-	background-color: #eee;
+	background-color: var(--color-lightgrey);
 }
 
 section{
@@ -103,7 +108,7 @@ section h1:after{
 }
 
 
-section .boxes .box{
+.box{
 	background-color: #fff;
 	height: 20%;
 	box-shadow: 1px 3px 15px #D9D9D9;
@@ -198,7 +203,7 @@ section .boxes .box .content{
 }
 
 #skills .progress{
-	background-color: #eee;
+	background-color: var(--color-lightgrey);
 	border-radius: 0;
 }
 
@@ -299,6 +304,55 @@ section .boxes .box .content{
 	color: #23262d;
 }
 
+/* UTILS */
+.fullheight {
+	min-height: calc(100vh - var(--navbar-height));
+	height: auto;
+}
+
+.bg-lightgrey {
+	background-color: var(--color-lightgrey);
+}
+
+.margin-top-auto{
+	margin-top: auto;
+}
+
+.margin-bottom-auto{
+	margin-bottom: auto;
+}
+
+.margin-horizontal-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+
+/* end of UTILS */
+
+#keep-in-touch .cta-text{
+	font-size: 72px;
+}
+
+#keep-in-touch .box{
+	padding: 4rem 8rem; 
+	min-height: 30rem;
+}
+
+#keep-in-touch .social-icon img {
+	-moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#keep-in-touch .social-icon:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
 
 @media screen and (max-width: 760px) { 
 	video{
@@ -345,5 +399,17 @@ section .boxes .box .content{
 		max-height: 50px;
 	}
 
+	#keep-in-touch .row{
+		display: block;
+	}
+
+	#keep-in-touch .cta-text{
+		font-size: 48px;
+	}
+
+	#keep-in-touch .box{
+		min-height: 25rem;
+		padding: 2rem 4rem;
+	}
 
 }
