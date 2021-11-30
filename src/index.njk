@@ -387,6 +387,30 @@
 </section>
 <!-- end PORTFOLIO -->
 
+<!-- HALL OF FAME !-->
+<section id="hall-of-fame" class="container-fluid fullheight bg-white">
+	<div class="container">
+		<h1>Hall of fame</h1>
+		<div class="row boxes">
+		{%- for achievement in collections.achievements -%}
+			<div class="col col-md-4">
+				<div class="box">
+					<div class="title">
+						<h4>{{ achievement.data.title }}</h4>
+						<img src="{{ achievement.data.icon }}" width="50" class="img-responsive icon">
+					</div>
+					<div class="content">
+						<p>{{ achievement.templateContent | safe }}</p>
+					</div>
+				</div>
+			</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</section>
+<!-- end of HALL OF FAME !-->
+
+
 <!-- KEEP IN TOUCH !-->
 <section id="keep-in-touch" class="container-fluid fullheight bg-lightgrey flex-center">
 	<div class="container margin-top-auto margin-bottom-auto">
